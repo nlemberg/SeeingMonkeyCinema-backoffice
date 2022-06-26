@@ -14,6 +14,8 @@ mongoose
   .then(() => console.log("MongoDB connected..."))
   .catch((err) => console.log(err));
 
+app.use("/employees", require("./routes/employeeController"));
+
 const port = process.env.PORT || 8001;
 
 app.listen(port, () => {
